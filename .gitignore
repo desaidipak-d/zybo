@@ -1,0 +1,37 @@
+# ---------- Vivado: keep .xpr, .srcs (Verilog, XDC, block designs) and .xsa ----------
+*.cache/
+*.gen/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.Xil/
+.Xil/
+*.jou
+*.log
+*.str
+*.backup.*
+*.wdb
+webtalk*
+usage_statistics_webtalk.*
+vivado_pid*.zip
+
+# ---------- Vitis: keep app sources and component settings ----------
+vitis_ws/**/build/
+vitis_ws/**/_ide/
+vitis_ws/**/logs/
+vitis_ws/_ide/
+vitis_ws/.rigel_lopper/
+vitis_ws/**/compile_commands.json
+vitis_ws/**/.clangd
+# Platform BSP/FSBL are regenerated from the XSA
+vitis_ws/*/export/
+vitis_ws/*/ps7_cortexa9_0/
+vitis_ws/*/zynq_fsbl/
+vitis_ws/*/resources/
+
+# ---------- Editors / OS ----------
+.vscode/
+*.swp
+Thumbs.db
+desktop.ini
