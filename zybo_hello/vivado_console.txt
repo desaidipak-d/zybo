@@ -1,0 +1,71 @@
+﻿
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Oct 15 18:19:01 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source build_hw.tcl
+# set root [file dirname [file normalize [info script]]]
+# set proj_dir "$root/vivado"
+# create_project hello_hw $proj_dir -part xc7z010clg400-1 -force
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/DipakDesai/AppData/Roaming/Claude/scratch-workspaces/99ddf397-9216-4380-bb4c-3e23d702777f/aca353c7-ceff-47ca-8691-3234c891166e/scratch-2026-10-15-421016/zybo_hello/vivado'
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 589.559 ; gain = 256.348
+# set_property board_part digilentinc.com:zybo-z7-10:part0:1.2 [current_project]
+# create_bd_design system
+Wrote  : <C:\Users\DipakDesai\AppData\Roaming\Claude\scratch-workspaces\99ddf397-9216-4380-bb4c-3e23d702777f\aca353c7-ceff-47ca-8691-3234c891166e\scratch-2026-10-15-421016\zybo_hello\vivado\hello_hw.srcs\sources_1\bd\system\system.bd> 
+# set ps [create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7 ps7]
+# apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 \
+#     -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable"} $ps
+# set_property CONFIG.PCW_USE_M_AXI_GP0 {0} $ps
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.050 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.044 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+# validate_bd_design
+WARNING: [BD 5-700] No address spaces matched 'get_bd_addr_spaces -of_objects /ps7 -filter {path == /ps7/Data}'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects {}'
+# save_bd_design
+Wrote  : <C:\Users\DipakDesai\AppData\Roaming\Claude\scratch-workspaces\99ddf397-9216-4380-bb4c-3e23d702777f\aca353c7-ceff-47ca-8691-3234c891166e\scratch-2026-10-15-421016\zybo_hello\vivado\hello_hw.srcs\sources_1\bd\system\system.bd> 
+INFO: [BD 41-1662] The design 'system.bd' is already validated. Therefore parameter propagation will not be re-run.
+Verilog Output written to : C:/Users/DipakDesai/AppData/Roaming/Claude/scratch-workspaces/99ddf397-9216-4380-bb4c-3e23d702777f/aca353c7-ceff-47ca-8691-3234c891166e/scratch-2026-10-15-421016/zybo_hello/vivado/hello_hw.gen/sources_1/bd/system/synth/system.v
+Verilog Output written to : C:/Users/DipakDesai/AppData/Roaming/Claude/scratch-workspaces/99ddf397-9216-4380-bb4c-3e23d702777f/aca353c7-ceff-47ca-8691-3234c891166e/scratch-2026-10-15-421016/zybo_hello/vivado/hello_hw.gen/sources_1/bd/system/sim/system.v
+Verilog Output written to : C:/Users/DipakDesai/AppData/Roaming/Claude/scratch-workspaces/99ddf397-9216-4380-bb4c-3e23d702777f/aca353c7-ceff-47ca-8691-3234c891166e/scratch-2026-10-15-421016/zybo_hello/vivado/hello_hw.gen/sources_1/bd/system/hdl/system_wrapper.v
+make_wrapper: Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 698.980 ; gain = 13.246
+# set wrapper [make_wrapper -files [get_files system.bd] -top]
+# add_files -norecurse $wrapper
+# set_property top system_wrapper [current_fileset]
+# generate_target all [get_files system.bd]
+INFO: [BD 41-1662] The design 'system.bd' is already validated. Therefore parameter propagation will not be re-run.
+Verilog Output written to : C:/Users/DipakDesai/AppData/Roaming/Claude/scratch-workspaces/99ddf397-9216-4380-bb4c-3e23d702777f/aca353c7-ceff-47ca-8691-3234c891166e/scratch-2026-10-15-421016/zybo_hello/vivado/hello_hw.gen/sources_1/bd/system/synth/system.v
+Verilog Output written to : C:/Users/DipakDesai/AppData/Roaming/Claude/scratch-workspaces/99ddf397-9216-4380-bb4c-3e23d702777f/aca353c7-ceff-47ca-8691-3234c891166e/scratch-2026-10-15-421016/zybo_hello/vivado/hello_hw.gen/sources_1/bd/system/sim/system.v
+Verilog Output written to : C:/Users/DipakDesai/AppData/Roaming/Claude/scratch-workspaces/99ddf397-9216-4380-bb4c-3e23d702777f/aca353c7-ceff-47ca-8691-3234c891166e/scratch-2026-10-15-421016/zybo_hello/vivado/hello_hw.gen/sources_1/bd/system/hdl/system_wrapper.v
+vivado.bat : ERROR: [Common 17-680] Path length exceeds 260-Byte maximum allowed by Windows: c:/Users/DipakDesai/AppDat
+a/Roaming/Claude/scratch-workspaces/99ddf397-9216-4380-bb4c-3e23d702777f/aca353c7-ceff-47ca-8691-3234c891166e/scratch-2
+026-10-15-421016/zybo_hello/vivado/hello_hw.gen/sources_1/bd/system/ipshared/4b52/hdl/verilog/processing_system7_v5_5_a
+w_atc.v
+At line:1 char:358
++ ... ocation $d; & C:\AMDDesignTools\2025.2\Vivado\bin\vivado.bat -mode ba ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ERROR: [Common ...7_v5_5_aw_atc.v:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Please consider using the OS subst command to shorten the path length by mapping part of the path to a virtual drive 
+letter. See Answer Record AR52787 for more information.
+Resolution: In Windows 7 or later, the mklink command can also be used to create a symbolic link and shorten the path.
+ERROR: [BD 41-1030] Generation failed for the IP Integrator block ps7 
+Exporting to file C:/Users/DipakDesai/AppData/Roaming/Claude/scratch-workspaces/99ddf397-9216-4380-bb4c-3e23d702777f/aca353c7-ceff-47ca-8691-3234c891166e/scratch-2026-10-15-421016/zybo_hello/vivado/hello_hw.gen/sources_1/bd/system/hw_handoff/system.hwh
+Generated Hardware Definition File C:/Users/DipakDesai/AppData/Roaming/Claude/scratch-workspaces/99ddf397-9216-4380-bb4c-3e23d702777f/aca353c7-ceff-47ca-8691-3234c891166e/scratch-2026-10-15-421016/zybo_hello/vivado/hello_hw.gen/sources_1/bd/system/synth/system.hwdef
+INFO: [BD 41-3262] Generated VHDL Instantiation Template file c:/Users/DipakDesai/AppData/Roaming/Claude/scratch-workspaces/99ddf397-9216-4380-bb4c-3e23d702777f/aca353c7-ceff-47ca-8691-3234c891166e/scratch-2026-10-15-421016/zybo_hello/vivado/hello_hw.gen/sources_1/bd/system/system.vho
+INFO: [BD 41-3262] Generated Verilog Instantiation Template file c:/Users/DipakDesai/AppData/Roaming/Claude/scratch-workspaces/99ddf397-9216-4380-bb4c-3e23d702777f/aca353c7-ceff-47ca-8691-3234c891166e/scratch-2026-10-15-421016/zybo_hello/vivado/hello_hw.gen/sources_1/bd/system/system.veo
+INFO: [BD 41-3262] Generated System Verilog Instantiation Template file c:/Users/DipakDesai/AppData/Roaming/Claude/scratch-workspaces/99ddf397-9216-4380-bb4c-3e23d702777f/aca353c7-ceff-47ca-8691-3234c891166e/scratch-2026-10-15-421016/zybo_hello/vivado/hello_hw.gen/sources_1/bd/system/system_sv.sveo
+generate_target: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 728.801 ; gain = 29.820
+ERROR: [Common 17-39] 'generate_target' failed due to earlier errors.
+
+    while executing
+"generate_target all [get_files system.bd]"
+    (file "build_hw.tcl" line 28)
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 15 18:19:49 2026...
